@@ -1,0 +1,83 @@
+form{
+    /* display:grid;
+    direction: rtl;
+    grid-template-columns: repeat(12,1fr);
+    box-sizing: border-box;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas:
+    "title",
+    "form",
+    "send";
+    /* margin:auto; */
+    text-align: center;
+    padding:1%; 
+   position: relative;
+   
+}
+input[type="text"]{
+    font-size:0.8rem;
+    height:50%;
+}
+
+.title{
+    grid-area: title;
+    color:white;
+}
+.title > div{
+    display:inline-block;
+    text-align: center;
+}
+.form{
+    grid-area: form;
+}
+.send{
+    background-color:purple;
+    color:white; 
+    display: inline-block;
+    border: none;
+    padding: 0.2rem;
+    width:100%;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    height:50%;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+/* .checkbox input[type="checkbox"] {
+	display:none;
+}
+
+.checkbox input + label {
+	display: inline-block;	
+	width: 60px;
+	height: 30px;
+	cursor: pointer;	
+	background-color: white; 
+}
+.checkbox input[type="checkbox"]:checked + label {
+	background-image: url("/checkbox.png")
+} */
+
+.checkboxStyle{
+    color:white;
+    font-size:0.6rem;
+}
+/* .checkboxes{
+    text-align: right;
+} */
+table,td{
+    text-align: center;
+    margin:auto;
+    padding:0;
+}
+label{
+    margin:0;
+    padding:0;
+}
+.tdCheckbox{
+    text-align: right;
+}

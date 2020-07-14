@@ -1,0 +1,29 @@
+.finish{
+    display:grid;
+    direction: rtl;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:auto auto;
+    grid-template-areas:
+    ". img ." 
+    ". blessing .";
+    padding:1%;
+    justify-content: center;  
+}
+.finish>img{
+    position: relative;
+    grid-area: img;
+    right:25%;
+    -webkit-transform: scale(0.75); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.75); /* FF3.5+ */
+      -ms-transform: scale(0.75); /* IE9 */
+       -o-transform: scale(0.75); /* Opera 10.5+ */
+          transform: scale(0.75);
+}
+.blessing{
+    grid-area:blessing;
+    text-align: center;
+}
+.blessing>span{
+    display: block;
+    color:white;
+}
