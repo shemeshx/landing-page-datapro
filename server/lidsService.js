@@ -18,8 +18,11 @@ const getAllLids = async () =>{
         throw new Error(e.message);
     }
 }
-
+const lidsEdit =  (lids) => {
+    lidsDB.editLids(lids)
+}
 module.exports = {
     addLid,
-    getAllLids
+    getAllLids,
+    lidsEdit
 }

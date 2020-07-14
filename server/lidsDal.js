@@ -1,4 +1,5 @@
 const fs = require('fs')
+
 const path = require('path')
 const addLid = (name, email, phone, city, member,delivry) => {
     return new Promise((resolve,reject)=>{
@@ -27,8 +28,12 @@ const getAllLids = async () => {
         });
     })
 };
-
+const editLids =  (lids) => {
+    console.log(lids)
+    fs.writeFileSync(path.join(__dirname,'lids.json'), JSON.stringify(lids))
+};
 module.exports = {
     addLid,
-    getAllLids
+    getAllLids,
+    editLids
 }

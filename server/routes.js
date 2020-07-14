@@ -20,11 +20,16 @@ router.get('/lids/all', async(req,res)=>{
     }
 });
 router.post('/login',(req,res)=>{
-    console.log(req.body);
     if(req.body.username==="admin" && req.body.password==="admin"){
         res.sendStatus(200);
     }
     else
         res.sendStatus(401);
+})
+router.post('/lids/edit', (req,res)=>{
+    const lids = req.body;
+    console.log(req.body.lids);
+    LidsService.lidsEdit(lids)
+    res.sendStatus(200)
 })
 module.exports = router;
