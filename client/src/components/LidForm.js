@@ -3,11 +3,23 @@ import { useForm } from "react-hook-form";
 import hebData from "../data/heb.json"; 
 import './LidForm.css'
 import axios from 'axios';
+import { yupResolver } from '@hookform/resolvers';
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  name: yup.string().required(),
+  phone: yup.string().required(),
+  email: yup.string().required(),
+  city:yup.string().required(),
+});
+
 export default function LidForm(props) {
     const data = hebData;
     const [isMaccabi,setIsMaccabi] = useState(false);
     const [news,setNews] = useState(false);
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, watch, errors } = useForm({
+      resolver: yupResolver(schema)
+    });
     const onSubmit = data => {
         console.log(data)
         axios.post('http://localhost:3000/lids/add',{data}).then(res=>{
@@ -70,6 +82,6 @@ export default function LidForm(props) {
           </table>
       </div>
     </form>
-    
+       
     )
 }
